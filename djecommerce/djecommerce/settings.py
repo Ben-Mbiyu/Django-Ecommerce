@@ -44,10 +44,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.instagram',
-    'allauth.socialaccount.providers.twitter',
-
+    'allauth.socialaccount.providers.facebook'
 ]
 
 MIDDLEWARE = [
@@ -144,3 +141,26 @@ LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = "none"
 SOCIAL_ACCOUNT_QUERY_EMAIL = True
+
+# Auth0 Settings
+ALL_AUTH_TRAILING_HASH = False
+ALL_AUTH_AUTH0_DOMAIN = config('ALL_AUTH_AUTH0_DOMAIN')
+ALL_AUTH_AUTH0_KEY = config('ALL_AUTH_AUTH0_KEY')
+SOCIAL_AUTH_AUTH0_SECRET = config('SOCIAL_AUTH_AUTH0_SECRET')
+
+ALL_AUTH0_SCOPE = [
+    'openid',
+    'profile',
+    'email'
+]
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile'
+]
+
+SOCIAL_AUTH_FACEBOOK_KEY=config('SOCIAL_AUTH_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET=config('SOCIAL_AUTH_FACEBOOK_SECRET')
+
+# Django Registration Settings
+ACCOUNT_ACTIVATION_DAYS = 1
