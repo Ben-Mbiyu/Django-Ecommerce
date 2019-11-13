@@ -1,21 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load columns %}
 
 {% block content %}
+
 <div class="uk-container product-section">
   <h2 class="uk-heading-medium uk-heading-line uk-text-center"><span>Products</span></h2>
-    <div class="uk-card uk-card-default">
-        <div class="uk-card-media-top">
-            <img src="{% static '/images/shopping-bags.jpg' %}" alt="product-image">
+    <div class="uk-grid-medium uk-grid-match" uk-grid>
+      {% for col in products|columns:3 %}
+        <div class="uk-width-1-3@m">
+          {% for product in col %}
+            <div class="uk-card uk-card-default uk-card-hover uk-margin-medium-bottom uk-height-large">
+                <div class="uk-card-media-top">
+                    <img src="{{ product.image.url }}" alt="product-image">
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                </div>
+                <div class="uk-card-footer">
+                  <a href="#" class="uk-button uk-button-text">Add to Cart <span uk-icon="cart"></a>
+                  <h2 class="uk-label uk-label-warning uk-align-right uk-text-bold">Ksh {{ product.price }}/=</h2>
+                </div>
+            </div>
+          {% endfor %}
         </div>
-        <div class="uk-card-body">
-            <div class="uk-card-badge uk-label">Discount</div>
-            <h3 class="uk-card-title">Media Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-        <div class="uk-card-footer">
-            <a href="#" class="uk-button uk-button-text">Add to Cart <span uk-icon="cart"></a>
-        </div>
+      {% endfor %}
     </div>
 </div>
 

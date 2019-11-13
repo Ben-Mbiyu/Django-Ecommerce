@@ -1,7 +1,16 @@
 from django.db import models
 
 # Create your models here.
-# class Product(models.Model):
-#     name = models.CharField(max_length=50)
-#     description = models.TextField()
-#     price = models.PositiveIntegerField()
+class Product(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    image = models.ImageField(upload_to='images/')
+    price = models.PositiveIntegerField()
+    on_offer = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name;
+
+    def getProducts():
+        products = Product.objects.all()
+        return products;

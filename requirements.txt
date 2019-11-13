@@ -4,11 +4,12 @@ confusable-homoglyphs==3.2.0
 defusedxml==0.6.0
 Django==2.2.7
 django-allauth==0.40.0
-django-registration==3.0.1
+django-columns==0.1.0
 ecdsa==0.13.3
 future==0.18.1
 idna==2.8
 oauthlib==3.1.0
+Pillow==6.2.1
 psycopg2-binary==2.8.3
 pyasn1==0.4.7
 PyJWT==1.7.1
