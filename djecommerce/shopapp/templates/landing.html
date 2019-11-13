@@ -2,5 +2,22 @@
 {% load static %}
 
 {% block content %}
+  <div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation:fade; autoplay:true; ratio:1920:1200; max-height:780;">
 
+      <ul class="uk-slideshow-items">
+          <li>
+              <img src="{% static 'images/shopopen.jpg' %}" alt="cart" uk-cover>
+          </li>
+          <li>
+              <img src="{% static 'images/ladyincart.jpg' %}" alt="" uk-cover>
+          </li>
+          <li>
+              <img src="{% static 'images/creditcardshopping.jpg' %}" alt="" uk-cover>
+          </li>
+      </ul>
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+  </div>
 {% endblock %}

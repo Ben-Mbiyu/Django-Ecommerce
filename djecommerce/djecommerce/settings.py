@@ -154,11 +154,13 @@ ALL_AUTH0_SCOPE = [
     'email'
 ]
 
+# Google Social Authentication
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
     'https://www.googleapis.com/auth/userinfo.email',
     'https://www.googleapis.com/auth/userinfo.profile'
 ]
 
+# Facebook Social Authentication
 SOCIAL_AUTH_FACEBOOK_KEY=config('SOCIAL_AUTH_FACEBOOK_KEY')
 SOCIAL_AUTH_FACEBOOK_SECRET=config('SOCIAL_AUTH_FACEBOOK_SECRET')
 

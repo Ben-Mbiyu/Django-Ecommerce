@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="uk-container product-section">
+  <h2 class="uk-heading-medium uk-heading-line uk-text-center"><span>Products</span></h2>
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-media-top">
+            <img src="{% static '/images/shopping-bags.jpg' %}" alt="product-image">
+        </div>
+        <div class="uk-card-body">
+            <div class="uk-card-badge uk-label">Discount</div>
+            <h3 class="uk-card-title">Media Top</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+        <div class="uk-card-footer">
+            <a href="#" class="uk-button uk-button-text">Add to Cart <span uk-icon="cart"></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
