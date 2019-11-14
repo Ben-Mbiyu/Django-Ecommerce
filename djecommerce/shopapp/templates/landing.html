@@ -2,17 +2,29 @@
 {% load static %}
 
 {% block content %}
-  <div class="slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation:fade; autoplay:true; ratio:1920:1200; max-height:780;">
+  <div class="slider uk-position-relative uk-visible-toggle uk-light uk-overlay-primary" tabindex="-1" uk-slideshow="animation:fade; autoplay:true; min-height:500; max-height:700;" uk-parallax="opacity:0;">
 
       <ul class="uk-slideshow-items">
           <li>
-              <img src="{% static 'images/shopopen.jpg' %}" alt="cart" uk-cover>
+              <img src="{% static 'images/waridi-landing1.jpg' %}" alt="landing page image" uk-cover>
+              <div class="uk-position-bottom uk-position-large uk-text-center uk-transition-slide-bottom">
+                <h2 uk-slideshow-parallax="x: 100,-100">Splendid</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Most splendid collection there is.</p>
+              </div>
           </li>
           <li>
-              <img src="{% static 'images/ladyincart.jpg' %}" alt="" uk-cover>
+              <img src="{% static 'images/waridi-landing2.jpg' %}" alt="landing page image" uk-cover>
+              <div class="uk-position-bottom uk-position-large uk-text-center uk-transition-slide-bottom">
+                <h2 uk-slideshow-parallax="x: 100,-100">Stylish</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Your style, you vibe.</p>
+              </div>
           </li>
           <li>
-              <img src="{% static 'images/creditcardshopping.jpg' %}" alt="" uk-cover>
+              <img src="{% static 'images/waridi-landing3.jpg' %}" alt="landing page image" uk-cover>
+              <div class="uk-position-bottom uk-position-large uk-text-center uk-transition-slide-bottom">
+                <h2 uk-slideshow-parallax="x: 100,-100">Unbeatable Prices</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Quality meets best prices.</p>
+              </div>
           </li>
       </ul>
 

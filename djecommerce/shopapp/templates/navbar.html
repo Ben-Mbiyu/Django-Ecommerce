@@ -1,53 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- <div class="ui inverted segment">
-  <div class="ui secondary top menu fixed">
-    <div class="header item link">
-      <i class="shopping basket icon"></i> DREAMVILLE SHOP
-    </div>
-    <a class="item active">
-      <i class="shopping bag icon"></i>
-      Products
-    </a>
-    <a class="item">
-      <i class="shopping cart icon"></i>
-      Orders
-    </a>
-    <a class="item">
-      <i class="user circle outline icon"></i>
-      Account
-    </a>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui icon input">
-          <input type="text" placeholder="Search products...">
-          <i class="search link icon"></i>
-        </div>
-      </div>
-      {% if user.is_authenticated %}
-      <a href="/accounts/logout/">
-        <button class="ui inverted grey button"><i class="sign-out alternate icon"></i> Logout</button>
-      </a>
-      {% else %}
-      <div class="ui medium buttons">
-        <a href="/accounts/facebook/login">
-          <button class="ui facebook button"><i class="facebook icon"></i> Facebook</button>
-        </a>
-        <div class="or"></div>
-        <a href="/accounts/google/login">
-          <button class="ui red button"><i class="google icon"></i> Google </button>
-        </a>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-</div> -->
 
-<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark">
-    <nav class="uk-navbar-container" uk-navbar>
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;" class="">
+    <nav class="uk-background-secondary uk-light" uk-navbar>
       <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo"><b>DreamVille Shop</b></a>
+        <a href="" class="uk-navbar-item uk-logo uk-dark"><b>DreamVille Shop</b></a>
       </div>
       <div class="uk-navbar-center">
         <ul class="uk-navbar-nav">
@@ -73,21 +31,19 @@
           </div>
       </div>
 
-      <!-- <a class="uk-button uk-button-danger uk-margin-right" href="/accounts/logout/">
-        <span uk-icon="sign-out"> Logout</span>
-      </a> -->
       {% else %}
-        <button class="signin uk-button uk-button-secondary uk-margin-right" type="button">SIGN IN <span uk-icon="sign-in"></span></button>
+        <button class="signin uk-button uk-button-default uk-margin-right" type="button">SIGN IN <span uk-icon="sign-in"></span></button>
         <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 600">
-          <a href="/accounts/google/login">
-            <button class="uk-button uk-button-danger uk-button-small"><span uk-icon="google"></span> Google</button>
+          <a href="/accounts/google/login" class="uk-button uk-button-danger uk-margin uk-light">
+            <span uk-icon="google"></span> Google
           </a>
-          <a href="/accounts/facebook/login">
-            <button class="uk-button uk-button-primary uk-button-small"><span uk-icon="facebook"></span> Facebook</button>
+          <a href="/accounts/facebook/login" class="uk-button uk-button-primary">
+            <span uk-icon="facebook"></span> Facebook
           </a>
         </div>
       </div>
       {% endif %}
     </nav>
 </div>
+
 {% endblock %}

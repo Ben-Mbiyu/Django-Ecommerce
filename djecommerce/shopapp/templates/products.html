@@ -4,9 +4,9 @@
 
 {% block content %}
 
-<div class="uk-container product-section">
+<div class="uk-container product-section uk-margin-large-top">
   <h2 class="uk-heading-medium uk-heading-line uk-text-center"><span>Products</span></h2>
-    <div class="uk-grid-medium uk-grid-match" uk-grid>
+    <div class="uk-grid-medium uk-grid-match uk-margin-medium-top" uk-grid>
       {% for col in products|columns:3 %}
         <div class="uk-width-1-3@m">
           {% for product in col %}
@@ -15,8 +15,8 @@
                     <img src="{{ product.image.url }}" alt="product-image">
                 </div>
                 <div class="uk-card-body">
-                    <h3 class="uk-card-title">{{ product.name }}</h3>
-                    <p>{{ product.description }}</p>
+                  <h3 class="uk-card-title">{{ product.name }}</h3>
+                  <p>{{ product.description }}</p>
                 </div>
                 <div class="uk-card-footer">
                   <a href="#" class="uk-button uk-button-text">Add to Cart <span uk-icon="cart"></a>

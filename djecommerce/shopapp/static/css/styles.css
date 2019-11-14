@@ -1,15 +1,12 @@
 .product-section{
   margin-top: 30px;
 }
-
 .uk-logo{
   font-family: 'Pacifico', cursive;
 }
-
-.signin{
-  margin-right: 80px !important;
+body{
+  font-family: 'Nunito' !important;
 }
-
-navyblue{
-  color: #031926 !important;
+.uk-navbar.nav.uk-active{
+  background-color: #2191FB !important;
 }
