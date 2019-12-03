@@ -17,7 +17,7 @@
       <div class="uk-navbar-right">
       {% if user.is_authenticated %}
       <div class="uk-margin-right">
-          <a href="" class="uk-icon-button" uk-icon="user"></a>
+          <a href="" class="uk-icon-button" uk-icon="user"><span>{{ user.username }}</span></a>
           <div uk-dropdown="pos:bottom-justify">
               <ul class="uk-nav uk-dropdown-nav">
                 <div>
@@ -37,7 +37,7 @@
           <a href="/accounts/google/login" class="uk-button uk-button-danger uk-margin uk-light">
             <span uk-icon="google"></span> Google
           </a>
-          <a href="/accounts/facebook/login" class="uk-button uk-button-primary">
+          <a href="/accounts/facebook/login" class="uk-button uk-button-primary uk-light">
             <span uk-icon="facebook"></span> Facebook
           </a>
         </div>
